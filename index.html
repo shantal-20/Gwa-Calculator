@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWA Calculator</title>
+    <link rel="shortcut icon" href="Image/fav-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar">
+        <div class="container-logo">
+          <img src="Image/logo.png" alt="Logo" />
+          <h1 class="main-title">GWA Calculator Philippines</h1>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="Pages/about.html" class="nav-link">About</a>
+        </div>
+      </nav>
+    </main>
+
+    <div class="card text-center">
+      <div class="card-body">
+        <h6 class="card-subtitle">
+          Skip the Manual Math—Let Me Calculate Your GWA in Seconds!
+        </h6>
+        <p class="card-text">
+          Our GWA calculator is your trusty sidekick for fast, accurate grade
+          tracking. Whether you’re chasing honors or just want to keep your
+          academic progress in check, this tool does the heavy lifting. Just
+          enter your course credits and grades, and voilà — instant, reliable
+          results without the hassle.
+        </p>
+
+        <div class="GWA-Calculator">
+          <h5 class="card-title">GWA CALCULATOR</h5>
+          <div class="grade-container">
+            <div class="subject-container">
+              <label>Subject 1</label>
+            </div>
+            <div class="grade-input">
+              <label for="Units">Units</label>
+              <input type="number" class="units" />
+            </div>
+            <div class="grade-input">
+              <label for="Grade">Grade</label>
+              <input type="number" class="grades" />
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button onclick="addSubject()" class="btn btn-success">
+              Add Subject
+            </button>
+            <button onclick="calculateGWA()" class="btn btn-primary">
+              Calculate
+            </button>
+          </div>
+          <div class="result-container">
+            <div class="result">
+              <p>Total Units</p>
+              <input type="text" id="resultUnits" readonly />
+            </div>
+            <div class="result">
+              <p>GWA</p>
+              <input type="text" id="resultGwa" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="GWA-Introduction">
+          <h3 class="title">What is General Weighted Average?</h3>
+          <p class="text">
+            The <strong>General Weight Average(GWA) </strong>is a numerical
+            measure of a student's academic performance, commonly used in the
+            Philippines. It combines the grades and course units into a single
+            average that reflects the overall performance of a student
+            throughout a specific semester, year or academic term.
+          </p>
+          <h4 class="subtitle">How is GWA Calculated?</h4>
+          <p class="text">The GWA is calculated using the formula below:</p>
+          <div class="formula-container">
+            <p class="text">Formula:</p>
+            <img src="Image/Formula.png" alt="GWA Formula" />
+          </div>
+          <p class="text">
+            It is calculated by multiplying each subject or course grade by its
+            corresponding number of units, adding the products (weighted
+            grades), and then dividing it by the sum of total number of units
+            taken.
+          </p>
+          <div class="example-table">
+            <p class="text">Example:</p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Subject/Course</th>
+                  <th scope="col">Grade</th>
+                  <th scope="col">Units</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Subject 1</td>
+                  <td>1.75</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Subject 2</td>
+                  <td>2.50</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Subject 3</td>
+                  <td>1.25</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Subject 4</td>
+                  <td>1.50</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Subject 5</td>
+                  <td>1.00</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="instructions">
+              First <strong>Multiply </strong> Each Subject with its
+              corresponding units
+            </h5>
+            <p class="i-text">
+              Subject 1 - 1.75 x 3 = 5.25 <br />
+              Subject 1 - 2.50 x 2 = 5.00<br />
+              Subject 1 - 1.25 x 3 = 3.75 <br />
+              Subject 1 - 1.50 x 3 = 4.50 <br />
+              Subject 1 - 1.00 x 3 = 3.00<br />
+            </p>
+            <h5 class="instructions">
+              Next <strong> Add</strong> all of the units
+            </h5>
+            <p class="i-text">3 + 2 + 3 + 3 + 3 = 14 (total units)</p>
+            <h5 class="instructions">
+              Next <strong> Add</strong> the weighted grades
+            </h5>
+            <p class="i-text">
+              15.75 + 5 + 3.75 + 4.50 + 3 = 21.50 (total weighted grades)
+            </p>
+            <h5 class="instructions">
+              Next <strong> Divide </strong> the total units and total weighted
+              grades <br />
+            </h5>
+            <p class="i-text">
+              21.50 ÷ 14 = 1.54 <br />
+              So, the <strong>GWA</strong> is approximately<strong>
+                1.54.</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 GWA Calculator. All rights reserved. Created by NAHS.</p>
+    </footer>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- Sweetalert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      //Function for adding a subject
+      let subjectCount = 2;
+      function addSubject() {
+        const containerDiv = document.createElement("div");
+        containerDiv.className = "grade-container";
+        containerDiv.innerHTML = `
+          <div class="subject-container">
+            <label>Subject ${subjectCount}</label>
+          </div>
+          <div class="grade-input">
+            <label>Units</label>
+            <input type="number" class="units"  />
+          </div>
+          <div class="grade-input">
+            <label>Grade</label>
+            <input type="number" class="grades"/>
+          </div>
+        `;
+        document
+          .querySelector(".GWA-Calculator")
+          .insertBefore(
+            containerDiv,
+            document.querySelector(".button-container")
+          );
+        subjectCount++;
+      }
+
+      //Function for calculating
+      function calculateGWA() {
+        const gradeInputs = document.querySelectorAll(".grades");
+        const unitInputs = document.querySelectorAll(".units");
+
+        let totalUnits = 0;
+        let totalWeightedGrades = 0;
+        let validInput = false;
+
+        for (let i = 0; i < gradeInputs.length; i++) {
+          const grade = parseFloat(gradeInputs[i].value);
+          const units = parseFloat(unitInputs[i].value);
+
+          if (
+            !isNaN(grade) &&
+            grade >= 0 &&
+            grade <= 100 &&
+            !isNaN(units) &&
+            units > 0
+          ) {
+            validInput = true;
+            totalUnits += units;
+            totalWeightedGrades += grade * units;
+          } else if (
+            gradeInputs[i].value !== "" ||
+            unitInputs[i].value !== ""
+          ) {
+            Swal.fire({
+              title: "Invalid Input",
+              text: "Please enter valid numeric grades (0-100) and positive units for all subjects.",
+              icon: "error",
+              confirmButtonText: "Okay",
+            });
+            return;
+          }
+        }
+
+        if (!validInput) {
+          Swal.fire({
+            title: "Info",
+            text: "Please enter grades and units before calculating.",
+            icon: "info",
+            confirmButtonText: "Okay",
+          });
+          return;
+        }
+
+        const gwa = totalWeightedGrades / totalUnits;
+        document.getElementById("resultUnits").value = totalUnits;
+        document.getElementById("resultGwa").value = gwa.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

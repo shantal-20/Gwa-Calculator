@@ -1,0 +1,365 @@
+@font-face {
+  font-family: "Lora";
+  src: url(../Fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: url(../Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(120, 189, 196);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  padding: 1rem;
+  background-color: rgb(1, 44, 61);
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  .container-logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  img {
+    height: 70px;
+    border-radius: 5rem !important;
+  }
+
+  h1 {
+    font-family: "Playfair";
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 1rem;
+    /* margin: auto; */
+  }
+}
+
+.nav-item {
+  display: flex;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  border-bottom: 4px solid transparent; /* invisible border for layout stability */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(247, 67, 79);
+}
+
+.nav-link.active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.card {
+  background-color: rgb(246, 247, 242);
+  /* border: 1px solid red; */
+  border: none;
+  width: 85vw;
+  margin: auto;
+  margin-top: 3rem;
+  font-family: "Lora";
+  padding: 2rem;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.card-body {
+  margin: auto;
+  width: 75%;
+}
+
+.card-subtitle {
+  font-size: 20px;
+}
+
+.card-text {
+  font-size: 15px;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.GWA-Calculator {
+  border: 5px solid rgb(120, 189, 196);
+  border-radius: 1rem;
+  width: 650px;
+  margin: auto;
+  margin-top: 2.5rem;
+  padding: 1rem;
+}
+
+.grade-container {
+  /* border: 1px solid red; */
+  background-color: rgba(231, 209, 209, 0.5);
+  padding: 1rem;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row !important;
+  margin: 5px;
+  input {
+    width: 50%;
+    margin-left: 3px;
+    border-radius: 0.5rem;
+    border: none;
+    height: 30px;
+    text-align: center;
+  }
+}
+
+.subject-container {
+  margin-top: 1px;
+  color: rgb(247, 67, 79);
+  font-weight: 800;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 20px;
+}
+
+.btn {
+  width: 200px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  input {
+    margin-left: 5px;
+    height: 35px;
+    background-color: rgba(231, 209, 209, 0.5);
+    border: none;
+    font-family: "Poppins";
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+    margin-top: 1rem;
+    margin-right: 4px;
+  }
+}
+
+.contents {
+  margin-top: 2rem !important;
+  text-align: left;
+  width: 90%;
+  margin: auto;
+  border-top: 5px solid rgb(237, 64, 76);
+}
+
+.GWA-Introduction {
+  margin-top: 1rem !important;
+  line-height: 2;
+  .title {
+    margin-bottom: 1rem;
+    font-size: 25px;
+  }
+  .text {
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+  }
+
+  .subtitle {
+    margin-top: 1rem;
+    font-size: 25px;
+  }
+}
+
+.formula-container {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0.5rem;
+  .text {
+    font-weight: bold;
+  }
+  img {
+    height: 15vh;
+  }
+}
+
+.example-table {
+  width: 80%;
+  margin: auto;
+}
+
+.instructions {
+  font-size: 15px;
+}
+
+table {
+  width: 40% !important;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: rgb(1, 44, 61);
+  font-family: "Lora";
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+  border-top: 1px solid #ccc;
+  height: 8vh;
+}
+
+/* Tablet and below (max-width: 768px) */
+@media (max-width: 768px) {
+  main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-item {
+    display: flex;
+    margin: auto;
+  }
+
+  main img {
+    height: 60px;
+  }
+
+  main h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .card {
+    width: 95vw;
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+
+  .card-body {
+    width: 100%;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 15px;
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .GWA-Calculator {
+    width: 100%;
+    padding: 1rem;
+    border-width: 3px;
+    margin-top: 1rem;
+  }
+
+  .grade-container {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .grade-container input {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .result-container {
+    flex-direction: row;
+  }
+
+  .result {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .result input {
+    width: 50%;
+  }
+
+  .formula-container {
+    width: 45%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0.5rem;
+    .text {
+      font-weight: bold;
+    }
+    img {
+      height: 20vh;
+    }
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    display: flex;
+    margin: auto;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+}

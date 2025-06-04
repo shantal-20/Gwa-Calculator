@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Lora";
+  src: url(../Fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: url(../Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(120, 189, 196);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  padding: 1rem;
+  background-color: rgb(1, 44, 61);
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  .container-logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  img {
+    height: 70px;
+    border-radius: 5rem !important;
+  }
+
+  h1 {
+    font-family: "Playfair";
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 1rem;
+    /* margin: auto; */
+  }
+}
+
+.nav-item {
+  display: flex;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  border-bottom: 4px solid transparent; /* invisible border for layout stability */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(247, 67, 79);
+}
+
+.nav-link.active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.card {
+  font-family: "Lora";
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgb(246, 247, 242);
+  border: none;
+}
+
+.card-body {
+  width: 95%;
+  margin: auto;
+}
+
+.date {
+  letter-spacing: 2px;
+  font-size: 15px !important;
+}
+
+.card-title {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.text {
+  font-size: 15px;
+  text-indent: 3rem;
+}
+
+.email-link {
+  text-decoration: none;
+  color: rgb(33, 3, 117);
+}
+
+footer {
+  background-color: rgb(1, 44, 61);
+  font-family: "Lora";
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+  border-top: 1px solid #ccc;
+  height: 8vh;
+}
